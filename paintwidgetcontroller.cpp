@@ -63,3 +63,8 @@ void PaintWidgetController::ColorChanged(QColor color)
 {
     pen.setColor(color);
 }
+
+PaintWidgetController::~PaintWidgetController()
+{
+    delete m_curStrategy;
+}

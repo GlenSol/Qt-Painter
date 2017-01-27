@@ -14,6 +14,7 @@ public:
     virtual void mouseReleaseEvent(QMouseEvent* event);
     virtual void mouseMoveEvent(QMouseEvent*event);
     virtual void paintEvent(QPaintEvent* event);
+    ~PaintArea();
 };
 
 #endif // PAINTAREA_H

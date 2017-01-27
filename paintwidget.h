@@ -11,6 +11,7 @@ class PaintWidget:public QWidget
     Q_OBJECT
 public:
     PaintWidget(QWidget* parent = 0);
+    ~PaintWidget();
 private:
 
     QPushButton*  buttonCircle;
@@ -22,6 +23,7 @@ private:
     QComboBox  *  StylesComboBox;
     ColorWidget*  ColorBox;
     PaintArea  *  pArea;
+    QDockWidget*  pdock;
 private:
     void TuningPaintarea(PaintArea *& lable);
     void FillButtons(QPushButton *&but,const QString& iconPath);

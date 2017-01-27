@@ -57,4 +57,13 @@ void PaintArea::paintEvent(QPaintEvent* event)
         m_shapes[i]->drow(this);
     }
 }
-
+PaintArea::~PaintArea()
+{
+    if(!m_shapes.empty())
+    {
+        foreach(IShape* sh,m_shapes)
+        {
+            delete sh;
+        }
+    }
+}

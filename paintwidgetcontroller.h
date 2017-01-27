@@ -14,6 +14,7 @@ private:
     PaintWidgetController();
     PaintWidgetController( const PaintWidgetController& )=delete;
     PaintWidgetController& operator=( PaintWidgetController& )=delete;
+    ~PaintWidgetController();
 public:
     static PaintWidgetController& getInstance()
     {

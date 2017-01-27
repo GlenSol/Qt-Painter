@@ -47,9 +47,11 @@ PaintWidget::PaintWidget(QWidget *parent)
     QVBoxLayout*mainLayout = new QVBoxLayout;
 
     mainLayout->addLayout(buttonLayot);
-    mainLayout->addWidget(pArea);
+    pdock= new QDockWidget("MyDock", this);
+    pdock->setWidget(pArea);
+    mainLayout->addWidget(pdock);
 
-
+    //addDockWidget(Qt::LeftDockWidgetArea, pdock);
     buttonCircle->installEventFilter(this);
 
     this->setLayout(mainLayout);
@@ -89,4 +91,16 @@ void PaintWidget::FilleLineStyleList(QComboBox *& cbox )
 
 }
 
-
+PaintWidget::~PaintWidget()
+{
+    delete  buttonCircle;
+    delete  buttonSquare;
+    delete  buttonTriangle;
+    delete  butElastick;
+    delete  buttonShape;
+    delete  LineWidth;
+    delete  StylesComboBox;
+    delete  ColorBox;
+    delete  pArea;
+    delete  pdock;
+}
